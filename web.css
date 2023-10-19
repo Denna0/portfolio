@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: #020580;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #000;
+}
+header h2{
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    padding: 10px;
+}
+.navbar a:hover{
+    color: rgba(255, 254, 254, 0.651);
+}
+.container img{
+    height: 645px;
+
+}
+.container .image2{
+    border: 3px solid rgba(67, 34, 184, 0.151);
+    background: hsla(0, 0%, 100%, 0.171);
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 30%;
+    left: 22%;
+}
+.intro{
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+.intro .text{
+    color: hsl(0, 0%, 100%);
+    padding: 3px;
+    font-size: 2em;
+
+}
+@media only screen and (max-width: 600px){
+    body{
+        background: #000;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px, 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        background: #000;
+    }
+    header h2{
+        color: white;
+        text-shadow: 3px 3px 3px rgb(47, 4, 241); 
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 30%;
+    }
+    .navbar a{
+        text-decoration: none;
+        display: inline;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid;
+        height: 40px;
+        width: 80px;
+        
+    }
+    .navbar a:hover{
+        border: 2px solid blue;
+    }
+    .container img{
+        height: 700px;
+        width: 420px;
+    }
+    .container .image2{
+    border: 3px solid rgba(67, 34, 184, 0.151);
+    background: hsla(246, 98%, 35%, 0.171);
+    height: 330px;
+    width: 420px;
+    position: absolute;
+    top: 65%;
+    left: 0;
+    bottom: 0;
+    }
+    .intro{
+        position: absolute;
+        top: 30%;
+        right: 30px;
+        border: 1px solid #000;
+        box-shadow: 3px 3px 3px blue;
+    }
+    .intro .text{
+        color: hsl(0, 0%, 100%);
+        padding: 10px;
+        text-shadow: 3px 3px 5px blue;
+        font-size: 2em;
+    }
+}
