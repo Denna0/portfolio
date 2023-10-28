@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: hsla(239, 97%, 25%, 0.801);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: hsl(0, 0%, 0%);
+}
+header h2{
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    padding: 10px;
+}
+#into{
+    color: aqua;
+}
+.navbar a:hover{
+    color: rgba(255, 254, 254, 0.651);
+}

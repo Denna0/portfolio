@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: #020580;
+    background: hsla(239, 97%, 25%, 0.87);
 }
 header{
     position: fixed;
@@ -25,24 +25,55 @@ header h2{
 .navbar a{
     text-decoration: none;
     color: white;
-    margin-left: 5px;
+    margin: 5px;
     padding: 10px;
 }
+#into{
+    color: aqua;
+}
 .navbar a:hover{
-    color: rgba(255, 254, 254, 0.651);
+    color: rgba(0, 0, 0);
+    background-color: hsla(0, 0%, 100%, 0.425);
+    border-radius: 10px;
 }
 .container img{
     height: 645px;
 
 }
 .container .image2{
-    border: 3px solid rgba(67, 34, 184, 0.151);
     background: hsla(0, 0%, 100%, 0.171);
     height: 250px;
     width: 250px;
+    border-radius: 30px;
     position: absolute;
     top: 30%;
     left: 22%;
+    animation-name: color;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+@keyframes color {
+    0%{background: hsla(216, 96%, 78%, 0.562);}
+    20%{background: hsla(239, 97%, 25%, 0.801);}
+    50%{background: rgba(43, 11, 185, 0.301);}
+    100%{background: hsla(224, 92%, 76%, 0.616);}
+    
+}
+.container #welcome{
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    font-size: 2em;
+    animation-name: welcome;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+@keyframes welcome{
+    0%{color: hsla(0, 0%, 0%, 0.562);}
+    20%{color: hsla(0, 0%, 100%, 0.562);}
+    50%{color: hsla(0, 0%, 100%, 0.562);}
+    100%{color: hsla(0, 0%, 11%, 0.562);}
 }
 .intro{
     position: absolute;
@@ -51,10 +82,12 @@ header h2{
 }
 .intro .text{
     color: hsl(0, 0%, 100%);
-    padding: 3px;
+    padding:2px;
     font-size: 2em;
-
+    text-align: center;
 }
+
+
 @media only screen and (max-width: 600px){
     body{
         background: #000;
