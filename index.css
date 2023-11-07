@@ -5,6 +5,7 @@
 }
 body{
     background: hsla(239, 97%, 25%, 0.87);
+    overflow: hidden;
 }
 header{
     position: fixed;
@@ -28,13 +29,13 @@ header h2{
     margin: 5px;
     padding: 10px;
 }
-#into{
-    color: aqua;
-}
 .navbar a:hover{
-    color: rgba(0, 0, 0);
+    color: hsl(0, 0%, 0%);
     background-color: hsla(0, 0%, 100%, 0.425);
     border-radius: 10px;
+}
+#current{
+    color: aqua;
 }
 .container img{
     height: 645px;
@@ -53,104 +54,52 @@ header h2{
     animation-iteration-count: infinite;
 }
 @keyframes color {
-    0%{background: hsla(216, 96%, 78%, 0.562);}
-    20%{background: hsla(239, 97%, 25%, 0.801);}
-    50%{background: rgba(43, 11, 185, 0.301);}
-    100%{background: hsla(224, 92%, 76%, 0.616);}
+    0%{box-shadow: 0px 0px 30px hsl(0, 0%, 0%);}
+    20%{box-shadow: 0px 0px 20px hsl(0, 0%, 0%),
+                    0px 0px 20px hsl(2, 100%, 59%)
+                    0px 0px 30px hsl(310, 100%, 50%);}
+    40%{box-shadow: 0px 0px 10px hsl(0, 1%, 67%),
+                    0px 0px 20px hsl(270, 100%, 59%),
+                    0px 0px 30px hsl(240, 100%, 50%);}
+    60%{box-shadow: 0px 0px 10px hsl(0, 5%, 100%),
+                    0px 0px 20px hsl(93, 100%, 59%),
+                    0px 0px 30px hsl(167, 100%, 50%);}
+    80%{box-shadow: 0px 0px 10px hsl(0, 2%, 57%),
+                    0px 0px 20px hsl(73, 100%, 59%),
+                    0px 0px 30px hsl(335, 100%, 50%);}
+    100%{box-shadow: 0px 0px 30px hsl(0, 0%, 0%);}
     
 }
 .container #welcome{
-    color: hsl(0, 0%, 100%);
+    color: hsla(0, 0%, 100%, 0.678);
     position: absolute;
     top: 45%;
     left: 15%;
     font-size: 2em;
-    animation-name: welcome;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
 }
-@keyframes welcome{
-    0%{color: hsla(0, 0%, 0%, 0.562);}
-    20%{color: hsla(0, 0%, 100%, 0.562);}
-    50%{color: hsla(0, 0%, 100%, 0.562);}
-    100%{color: hsla(0, 0%, 11%, 0.562);}
-}
+
 .intro{
     position: absolute;
     top: 40%;
     right: 10%;
 }
 .intro .text{
-    color: hsl(0, 0%, 100%);
+    color: hsla(0, 0%, 100%, 0.788);
     padding:2px;
     font-size: 2em;
     text-align: center;
 }
+.intro .github{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(0, 0, 0);
+}
+.github:hover{
+    color: hsla(0, 0%, 0%, 0.588);
+}
 
 
-@media only screen and (max-width: 600px){
-    body{
-        background: #000;
-    }
-    header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px, 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 100;
-        background: #000;
-    }
-    header h2{
-        color: white;
-        text-shadow: 3px 3px 3px rgb(47, 4, 241); 
-        display: flex;
-        position: absolute;
-        top: 70px;
-        left: 30%;
-    }
-    .navbar a{
-        text-decoration: none;
-        display: inline;
-        color: rgb(255, 255, 255);
-        margin: 10px;
-        padding: 5px;
-        border: 1px solid;
-        height: 40px;
-        width: 80px;
-        
-    }
-    .navbar a:hover{
-        border: 2px solid blue;
-    }
-    .container img{
-        height: 700px;
-        width: 420px;
-    }
-    .container .image2{
-    border: 3px solid rgba(67, 34, 184, 0.151);
-    background: hsla(246, 98%, 35%, 0.171);
-    height: 330px;
-    width: 420px;
-    position: absolute;
-    top: 65%;
-    left: 0;
-    bottom: 0;
-    }
-    .intro{
-        position: absolute;
-        top: 30%;
-        right: 30px;
-        border: 1px solid #000;
-        box-shadow: 3px 3px 3px blue;
-    }
-    .intro .text{
-        color: hsl(0, 0%, 100%);
-        padding: 10px;
-        text-shadow: 3px 3px 5px blue;
-        font-size: 2em;
-    }
+@media only screen and (max-width: 767px){
+   
 }
